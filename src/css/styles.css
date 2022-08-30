@@ -22,3 +22,7 @@ body {
 ul { 
   list-style: none;
 }
+
+span {
+  font-weight: 900;
+}

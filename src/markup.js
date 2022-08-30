@@ -7,7 +7,7 @@ const mapCountries = countries.map(
     ({ flags: {svg}, name: {official} }) => {
     return `<li>
         <img width=30 src='${svg}'/>
-        <p>${official}</p>
+        <p><span>${official}</span></p>
         </li>`;
     }
 );
@@ -19,9 +19,9 @@ export function markupCountry([country]) {
     const myMarkupCountry = `
     <img width=30 src='${svg}'/>
     <h2>${official}</h2>
-    <p>Capital: ${capital}</p>
-    <p>Population: ${population}</p>
-    <p>Languages: ${Object.values(languages).join(', ')}</p>
+    <p><span>Capital:</span> ${capital}</p>
+    <p><span>Population:</span> ${population}</p>
+    <p><span>Languages:</span> ${Object.values(languages).join(', ')}</p>
     `
     mydiv.innerHTML = myMarkupCountry;
 }
